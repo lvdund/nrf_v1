@@ -1,3 +1,5 @@
 flask==2.2.2
-flask-restful==0.3.9
+flask_restful==0.3.9
 flask_swagger_ui==4.11.1
+pymongo==3.12.0
+python_dotenv==0.21.0
