@@ -1,11 +1,11 @@
 # Note
-* flask does not support http2 -> use quart with hypercorn
+* flask does not support http2 -> use `quart` with `hypercorn`
 * For the time being, I don't use the [Services](./Services/) package, all the functions are in `app.py` and the [crud](./crud/) . package
 
 
 # Run
 ```sh
-$ hypercorn --keyfile openssl/key.pem --certfile openssl/cert.pem --bind 'localhost:5000' app:app
+hypercorn --keyfile openssl/key.pem --certfile openssl/cert.pem --bind 'localhost:5000' app:app
 ```
 Default: ```Enter PEM pass phrase: 0000```
 # How to generate a self-signed certificate
