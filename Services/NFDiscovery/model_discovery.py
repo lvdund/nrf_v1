@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from Services.model import *
-import random
 
 NfStatus = ( 'REGISTERED', 'SUSPENDED')
 DataSetId = ( 'SUBSCRIPTION', 'POLICY', 'EXPOSURE', 'APPLICATION')

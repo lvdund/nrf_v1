@@ -1,9 +1,9 @@
 # from bson.objectid import ObjectId
-from . import database
+from .database import free5gc_db
 from Services import environment
 
 # collections
-nfprofile_collection = database.free5gc_db.nfprofile
+nfprofile_collection = free5gc_db.NfProfile
 
 def get_nf_instance(nfInstanceId):
     try:
