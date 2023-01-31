@@ -16,9 +16,9 @@ def create_nf_instance(nfInstanceId, nf_profile):
     if get_nf_instance(nfInstanceId= nfInstanceId) != None:
         print("NF has already registered")
         return 400
-    if not check_plmnId(nf_profile["plmnList"]):
-        print("NF is not in same plmnId")
-        return 400
+    # if not check_plmnId(nf_profile["plmnList"]):
+    #     print("NF is not in same plmnId")
+    #     return 400
     try:
         if "nfInstanceId" not in nf_profile:
             nf_profile["nfInstanceId"] = nfInstanceId
@@ -53,9 +53,9 @@ def modify_nf_instance(nfInstanceId, update_values):
         print("Cannot update")
         return 400
 
-def check_plmnId(plmn_lists):
-    for x in plmn_lists:
-        for y in environment.plmnId:
-            if x["mcc"] == y.mcc and x["mnc"] == y.mnc:
-                return True
-    return False
+# def check_plmnId(plmn_lists):
+#     for x in plmn_lists:
+#         for y in environment.plmnId:
+#             if x["mcc"] == y.mcc and x["mnc"] == y.mnc:
+#                 return True
+#     return False
